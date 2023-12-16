@@ -30,3 +30,11 @@ gympass style app.
 - [ ] Os dados da aplicação precisam estar persistidos em um banco PostgresSQL
 - [ ] Todas listas de dados precisam estar paginadas com 20 item por página;
 - [ ] O usuário devem ser identificados por JWT (json web token)
+
+## Patterns ulizados
+
+- Repositories - Abstrai a interação com o banco de dados em um módulo espeçifico.
+- Factories - Abstrai a instanciação de multiplas dependências
+- Controllers - Abstrai o handler das rotas para outro módulo.
+- Use cases / Services - Abstrai casos de uso comuns da aplicação para uma camada de servicos.
+- Inversão de dependêcias - Desacopla módulos permitindo que eles funcionem de forma mais independente.
