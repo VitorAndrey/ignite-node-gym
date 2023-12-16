@@ -13,6 +13,7 @@
         "sourceType": "module"
     },
     "plugins": [
+        "simple-import-sort",
         "@typescript-eslint"
     ],
     "rules": {
