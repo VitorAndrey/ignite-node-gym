@@ -10,3 +10,4 @@ export type CreateUser = Prisma.UserCreateInput;
 
 export type Gym = PrismaGym;
 export type CheckIn = PrismaCheckIn;
+export type CreateCheckIn = Prisma.CheckInUncheckedCreateInput;
