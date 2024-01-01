@@ -4,14 +4,6 @@ import { UsersRepository } from "../users-respository";
 export class InMemoryUsersRepository implements UsersRepository {
   public usersTable: User[] = [];
 
-  async findByEmail(email: string) {
-    const user = this.usersTable.find((user) => user.email === email);
-
-    if (!user) return null;
-
-    return user;
-  }
-
   async create(data: CreateUser) {
     const user = {
       id: "user-1",
@@ -22,6 +14,22 @@ export class InMemoryUsersRepository implements UsersRepository {
     };
 
     this.usersTable.push(user);
+
+    return user;
+  }
+
+  async findByEmail(email: string) {
+    const user = this.usersTable.find((user) => user.email === email);
+
+    if (!user) return null;
+
+    return user;
+  }
+
+  async findById(id: string) {
+    const user = this.usersTable.find((user) => user.id === id);
+
+    if (!user) return null;
 
     return user;
   }
