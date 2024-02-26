@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { UsersRepository } from "../users-respository";
+import { UsersRepository } from "../users-repository";
 import { CreateUser } from "@/models";
 
 export class PrismaUsersRepository implements UsersRepository {

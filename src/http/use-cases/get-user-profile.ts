@@ -1,5 +1,5 @@
 import { User } from "@/models";
-import { UsersRepository } from "@/repositories/users-respository";
+import { UsersRepository } from "@/repositories/users-repository";
 import { ResourceNotFoundError } from "./errors/resource-not-found";
 
 interface GetUserProfileUseCaseRequest {

@@ -1,4 +1,4 @@
-import { InMemoryUsersRepository } from "@/repositories/in-memory/in-memory-users";
+import { InMemoryUsersRepository } from "@/repositories/in-memory/in-memory-users-repository";
 import { AuthenticateUseCase } from "./authenticate";
 import { expect, describe, it, beforeEach } from "vitest";
 import { InvalidCredentialsError } from "./errors/invalid-credentials-error";

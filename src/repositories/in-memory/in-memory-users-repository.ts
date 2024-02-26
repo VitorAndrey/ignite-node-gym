@@ -1,5 +1,5 @@
 import { CreateUser, User } from "@/models";
-import { UsersRepository } from "../users-respository";
+import { UsersRepository } from "../users-repository";
 import { randomUUID } from "node:crypto";
 
 export class InMemoryUsersRepository implements UsersRepository {
