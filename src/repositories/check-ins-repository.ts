@@ -8,4 +8,5 @@ type FindByUserIdOnDate = {
 export interface CheckInsRepository {
   create(data: CreateCheckIn): Promise<CheckIn>;
   findByUserIdOnDate(data: FindByUserIdOnDate): Promise<CheckIn | null>;
+  findManyByUserId(userId: string, page: number): Promise<CheckIn[]>;
 }
