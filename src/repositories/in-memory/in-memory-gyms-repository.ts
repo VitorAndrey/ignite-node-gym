@@ -29,4 +29,12 @@ export class InMemoryGymsRepository implements GymsRepository {
 
     return gym;
   }
+
+  async searchMany({ query, page }: { query: string; page: number }) {
+    const gym = this.gymsTable
+      .filter((item) => item.title.includes(query))
+      .slice((page - 1) * 20, page * 20);
+
+    return gym;
+  }
 }
