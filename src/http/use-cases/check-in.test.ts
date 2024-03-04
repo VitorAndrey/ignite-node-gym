@@ -20,10 +20,10 @@ describe("Check In Use Case", () => {
     await gymsRepository.create({
       id: "gym-01",
       title: "Java Gym",
-      description: "Best gym",
+      phone: null,
+      description: null,
       latitude: -27.2892052,
       longitude: -49.6481891,
-      phone: "9999999",
     });
 
     vi.useFakeTimers();

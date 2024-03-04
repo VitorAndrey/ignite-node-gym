@@ -14,18 +14,18 @@ describe("Search Gyms Use Case", () => {
   it("should be able to search for gyms", async () => {
     await gymsRepository.create({
       title: "Java Gym",
-      description: "Best gym",
+      phone: null,
+      description: null,
       latitude: -27.4324232,
       longitude: -49.4324232,
-      phone: "9999999",
     });
 
     await gymsRepository.create({
       title: "Python Gym",
-      description: "Best gym",
+      phone: null,
+      description: null,
       latitude: -27.4324232,
       longitude: -49.4324232,
-      phone: "9999999",
     });
 
     const { gyms } = await sut.execute({
@@ -41,10 +41,10 @@ describe("Search Gyms Use Case", () => {
     for (let i = 1; i <= 22; i++) {
       await gymsRepository.create({
         title: `JavaScript Gym ${i}`,
-        description: "Best gym",
+        phone: null,
+        description: null,
         latitude: -27.4324232,
         longitude: -49.4324232,
-        phone: "9999999",
       });
     }
 
