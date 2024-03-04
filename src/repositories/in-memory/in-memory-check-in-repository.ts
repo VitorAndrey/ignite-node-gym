@@ -42,4 +42,8 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
       .filter((item) => userId === item.user_id)
       .slice((page - 1) * 20, page * 20);
   }
+
+  async countByUserId(userId: string) {
+    return this.checkInsTable.filter((item) => item.user_id === userId).length;
+  }
 }
