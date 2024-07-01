@@ -3,10 +3,12 @@ import { Environment } from "vitest";
 export default <Environment>{
   name: "prisma",
   async setup() {
-    console.log("Rodou");
+    console.log("Setup");
 
     return {
-      teardown() {},
+      teardown() {
+        console.log("Teardown");
+      },
     };
   },
   transformMode: "ssr",
