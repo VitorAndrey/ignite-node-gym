@@ -6,8 +6,10 @@ type FindByUserIdOnDate = {
 };
 
 export interface CheckInsRepository {
-  create(data: CreateCheckIn): Promise<CheckIn>;
+  findById(id: string): Promise<CheckIn | null>;
   findByUserIdOnDate(data: FindByUserIdOnDate): Promise<CheckIn | null>;
   countByUserId(userId: string): Promise<number>;
   findManyByUserId(userId: string, page: number): Promise<CheckIn[]>;
+  create(data: CreateCheckIn): Promise<CheckIn>;
+  save(checkIn: CheckIn): Promise<CheckIn>;
 }
